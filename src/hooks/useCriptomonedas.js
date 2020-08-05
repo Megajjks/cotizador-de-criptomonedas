@@ -1,4 +1,5 @@
 import React, { useState, Fragment } from "react";
+import PropType from "prop-types";
 import styled from "styled-components";
 
 const Label = styled.label`
@@ -44,6 +45,11 @@ const useCriptomonedas = (label, opciones) => {
 
   //Retornar state, interfaz, función que modifica el state
   return [criptomoneda, SeleccionarCripto];
+};
+
+useCriptomonedas.prototype = {
+  label: PropType.string.isRequired,
+  opciones: PropType.array.isRequired,
 };
 
 export default useCriptomonedas;

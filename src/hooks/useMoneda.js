@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import PropType from "prop-types";
 import styled from "styled-components";
 
 const Label = styled.label`
@@ -41,6 +42,11 @@ const useMoneda = (label, opciones) => {
 
   //Retornar state, interfaz, función que modifica el state
   return [moneda, SeleccionarMoneda];
+};
+
+useMoneda.prototype = {
+  label: PropType.string.isRequired,
+  opciones: PropType.array.isRequired,
 };
 
 export default useMoneda;

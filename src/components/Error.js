@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Mensaje = styled.div`
@@ -14,6 +15,10 @@ const Mensaje = styled.div`
 
 const Error = ({ mensaje }) => {
   return <Mensaje>{mensaje}</Mensaje>;
+};
+
+Error.prototype = {
+  mensaje: PropTypes.string.isRequired,
 };
 
 export default Error;

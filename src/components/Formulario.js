@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropType from "prop-types";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -77,6 +78,10 @@ const Formulario = ({ setCotizacion }) => {
       <Btn type="submit" value="calcular" />
     </form>
   );
+};
+
+Formulario.prototype = {
+  setCotizacion: PropType.func.isRequired,
 };
 
 export default Formulario;
