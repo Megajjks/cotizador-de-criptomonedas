@@ -71,7 +71,7 @@ const Formulario = ({ setCotizacion }) => {
   }, []);
 
   return (
-    <form onSubmit={cotizarMoneda}>
+    <form data-cy="formcomponent" onSubmit={cotizarMoneda}>
       {error ? <Error mensaje="Todos los campos son obligatorios" /> : null}
       <SelectMoneda />
       <SelectCriptomoneda />

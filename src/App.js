@@ -82,7 +82,7 @@ function App() {
         <Image src={Img} alt="img" />
       </div>
       <div>
-        <Heading>Cotiza criptomonedas al instante</Heading>
+        <Heading data-cy="title">Cotiza criptomonedas al instante</Heading>
         <Formulario setCotizacion={setCotizacion} />
         {status.error ? (
           <Error mensaje="Estamos teniendo problemas de conexión :s vuelva a intentar" />
